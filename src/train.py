@@ -50,9 +50,9 @@ disp = ConfusionMatrixDisplay(
 
 fig, ax = plt.subplots(figsize=(6, 6))
 
-disp.plot(ax=ax, cmap=plt.cm.Blues, colorbar=False)
+disp.plot(ax=ax, cmap=plt.cm.Greens, colorbar=False)
 
-ax.set_title(f"Confusion Matrix (accuracy={accuracy:.3f})")
+ax.set_title(f"Iris Classifier (accuracy={accuracy:.3f})")
 
 plt.savefig("outputs/confusion_matrix.png", dpi=300, bbox_inches="tight")
 
