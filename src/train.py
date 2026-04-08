@@ -50,8 +50,7 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
 # ----------------------------------------
-
-confusion_matrix(y_test, y_pred)
+# Print function
 
 print(iris.feature_names, iris.target_names)
 print("Predictions:", y_pred[:5])
@@ -59,6 +58,9 @@ print("True labels:", y_test[:5])
 print("Accuracy:", accuracy)
 
 (os.makedirs("outputs", exist_ok=True))
+
+# ------------------------------------------
+# Confusion Matrix display
 
 cm = confusion_matrix(y_test, y_pred)
 
@@ -77,5 +79,5 @@ plt.close(fig)
 
 # -------------------------------------------
 
-os.makedirs("models", exist_ok=True)
-joblib.dump(model, "models/decision_tree_iris.joblib")
+os.makedirs("outputs", exist_ok=True)
+joblib.dump(model, "outputs/decision_tree_iris.joblib")
